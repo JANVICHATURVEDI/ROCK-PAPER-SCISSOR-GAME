@@ -1,0 +1,64 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class NEW {
+
+        public static void main(String[] args) {
+            // Variable Declaration
+        /* Here 1 stands for ROck
+        and 2 stands for Paper
+        and 3 stands for Scissor
+         */
+            System.out.println("Hello Friend, Welcome to our rock , paper , scissor game\n" + "Enter 1 for Rock\n" + "Enter 2 for Paper\n" + "Enter 3 for scissor");
+            Scanner sc = new Scanner(System.in);
+            int a = sc.nextInt();
+            Random var = new Random();
+            int b = var.nextInt(1, 4);
+            switch (a) {
+                case 1 -> System.out.println("You choose Rock");
+                case 2 -> System.out.println("You choose paper");
+                case 3 -> System.out.println("You choose scissor");
+                default -> System.out.println("please select valid input");
+            }
+
+            if (a<=3){
+                switch (b) {
+
+                    case 1 -> System.out.println(" PC choose Rock");
+                    case 2 -> System.out.println("PC choose paper");
+                    case 3 -> System.out.println("PC choose scissor");
+
+                }
+
+            }
+
+// Winner Declaration
+            if(a==1 & b==1){
+                System.out.print("The game is draw");
+            }
+            else if(a==1 & b==2){
+                System.out.print("PC is the winner");
+            }else if(a==1 & b==3){
+                System.out.print("You are the winner");
+            }
+            else if(a==2 & b==1){
+                System.out.print("PC the winner");
+            }
+            else if(a==2 & b==2){
+                System.out.print("The game is draw");
+            }
+            else if(a==2 & b==3){
+                System.out.print("PC is the winner");
+            }
+            else if(a==3 & b==1){
+                System.out.print("PC is the winner");
+            }
+            else if(a==3 & b==2){
+                System.out.print("You are the winner");
+            }
+            else if(a==3 & b==3){
+                System.out.print("The game is draw");
+
+            }
+        }
+    }
